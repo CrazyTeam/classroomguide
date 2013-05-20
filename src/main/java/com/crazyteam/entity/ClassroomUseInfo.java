@@ -5,28 +5,19 @@ import java.util.Date;
 import com.crazyteam.util.WeekDay;
 
 /**
- * 教室使用情况实体类
- * 存储用户向系统提交的教教室使用情况
+ * 
+ * 
  * @author jiangsuyong
  *
  */
 public class ClassroomUseInfo {
 	private Integer id;
-	private Classroom classroom;//教室
+	private Classroom classroom;
 	private User user;
-	/*表示教室状态，
-	*0表示很空，1表示人少，
-	*2一半坐了，3人多，4爆满*/
+	
 	private Integer state;
-	private float weight;//用户的信用度权重
-	/*
-	 * 根据用户提交的时间生成对应的时间
-	 * 比如在 7：00~7：30提交数据，把他归类到7：30提交的数据
-	 * 把一天分成47段，用来表示一天的时间，
-	 * 比如 0表示0：00 ， 1表示0：30 ，2表示 1：00
-	 * 这样一次46表示23：30 ，由于24:00和0：00一样的所以
-	 * 合在一起
-	 *    */
+	private float weight;
+	
 	private Integer time;
 	private WeekDay weekDay;
 	private Date date;

@@ -7,12 +7,10 @@ package com.crazyteam.entity;
  */
 public class Course {
 	private Integer id;
-	private String name;//课程名
+	private String name;
 	private Integer startWeek;
 	private Integer endWeek;
-	/*老师的名字，由于想把系统设置简单，
-	 * 就直接在课程上写老师名字。可以在实际
-	 * 可能存在两个老师有相同的名字*/
+	
 	private String teacher;
 	
 	public Integer getId() {

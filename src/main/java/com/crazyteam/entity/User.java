@@ -1,18 +1,18 @@
 package com.crazyteam.entity;
 
 /**
- * 用户实体类
+ * 
  * 
  * @author jiangsuyong
  * @since 2013/5/15
- * 将苏勇Sb
+ * 
  *
  */
 public class User {
 	private Integer id;
 	private String name;
 	private String password;
-	private float weight;//用户信誉度
+	private float weight;
 	private Boolean forbid;
 	private String email;
 	public Integer getId() {

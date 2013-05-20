@@ -9,9 +9,9 @@ import com.crazyteam.util.WeekDay;
  */
 public class Schedule {
 	private Integer id;
-	private Course course;//对应的课程
-	private WeekDay weekDay;//枚举类型，表示周几，
-	private Integer lession;//表示第几节课
+	private Course course;
+	private WeekDay weekDay;
+	private Integer lession;
 	public Integer getId() {
 		return id;
 	}
@@ -42,6 +42,6 @@ public class Schedule {
 	public void setClassroom(Classroom classroom) {
 		this.classroom = classroom;
 	}
-	private Classroom classroom;//对应的教室
+	private Classroom classroom;
 	
 }
