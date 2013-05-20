@@ -1,7 +1,7 @@
 package com.crazyteam.entity;
 /**
  * 
- * 
+ * ´ó¼ÇºÅ
  * @author jiangsuyong
  * @since 2013/5/15
  */
