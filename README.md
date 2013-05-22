@@ -20,7 +20,7 @@
 
 1、clone本项目
 
-   git clone https://github.com/crazyteam/classroomguide.git
+   git clone https://github.com/CrazyTeam/classroomguide.git
 
 2、git教程
 
