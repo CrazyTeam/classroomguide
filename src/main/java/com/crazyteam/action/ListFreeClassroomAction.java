@@ -14,6 +14,8 @@ public class ListFreeClassroomAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = -2802000073198318674L;
 	
+
+	
 	public String listFreeClassroom() throws Exception
 	{
 		return null;
