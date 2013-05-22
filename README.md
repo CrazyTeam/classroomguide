@@ -1,4 +1,4 @@
-##Crazyteam团队开发
+##CrazyTeam团队开发
 
 ###License
 
