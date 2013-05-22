@@ -6,7 +6,7 @@
 
 ###Guide
 
-项目名为校园导航,本项目基于SSH开发，页面使用jquery mobile，项目构建基于maven。
+项目名为 校园助手 ,本项目基于SSH开发，页面使用jquery mobile，项目构建基于maven。
 
 所需要的开发工具：
 
