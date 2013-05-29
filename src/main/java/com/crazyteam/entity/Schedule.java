@@ -12,6 +12,7 @@ public class Schedule {
 	private Course course;
 	private WeekDay weekDay;
 	private Integer lession;
+	private Classroom classroom;
 	public Integer getId() {
 		return id;
 	}
@@ -42,6 +43,6 @@ public class Schedule {
 	public void setClassroom(Classroom classroom) {
 		this.classroom = classroom;
 	}
-	private Classroom classroom;
+	
 	
 }

@@ -7,8 +7,8 @@ package com.crazyteam.entity;
  */
 public class Classroom {
 	private Integer id;
-	private Integer buildNumber;//教学楼编号 1表示1教
-	private Integer number;//教师编号，比如101 一楼第一个教室
+	private Integer buildNumber;
+	private Integer number;
 	public Integer getId() {
 		return id;
 	}
