@@ -3,10 +3,16 @@
     "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
     "http://struts.apache.org/dtds/struts-2.1.7.dtd">
 <struts>
-	<package name="user" extends="struts-default" namespace="/">
+	<package name="user" extends="struts-default" namespace="/user">
 		<action name="login" class="userAction" method="login">
 			<result name="success" >/main.html</result>
-			<result name="login" >/login.html</result>
+			<result name="qqqq" >/login.html</result>
+			<
+		</action>
+	</package>
+	<package name="admin" extends="struts-default"   namespace="/admin">
+		<action name="login" class="adminAction" method="login" >
+			<result name="success" >/test.html</result>
 		</action>
 	</package>
 
