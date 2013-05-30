@@ -21,7 +21,7 @@ public class UserAction extends ActionSupport {
 	 */
 	public String login() throws Exception
 	{
-		return null;
+		return LOGIN;
 	}
 	/**
 	 * 注销

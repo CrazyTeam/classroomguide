@@ -45,7 +45,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingResources">
 			<list>
-				<value>org/springframework/samples/petclinic/hibernate/petclinic.hbm.xml
+				<value>com/crazyteam/entity/Admin.hbm.xml
 				</value>
 			</list>
 		</property>
@@ -60,6 +60,8 @@
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
+	
+	<bean id="userAction" class="com.crazyteam.action.UserAction" scope="prototype"></bean>
 
 	
 </beans>
