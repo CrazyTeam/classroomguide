@@ -69,5 +69,6 @@
 	<context:annotation-config></context:annotation-config>
 	<!-- 去哪个包扫描生成bean -->
  	<context:component-scan base-package="com.crazyteam.*" /> 
+ 	<bean id="userAction" class="com.crazyteam.action.UserAction"></bean>
 	
 </beans>

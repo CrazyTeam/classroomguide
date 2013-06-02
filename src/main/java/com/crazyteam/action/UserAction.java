@@ -1,14 +1,9 @@
 package com.crazyteam.action;
-
-<<<<<<< HEAD
 import java.util.Map;
-=======
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
->>>>>>> 6490904f6fb6f79b5d897561039ec83906ae18b0
-
 import com.crazyteam.entity.User;
 import com.crazyteam.service.UserService;
 import com.opensymphony.xwork2.ActionSupport;
@@ -20,8 +15,6 @@ import com.opensymphony.xwork2.ActionSupport;
  */
 @Component(value="userAction")
 public class UserAction extends ActionSupport {
-
-<<<<<<< HEAD
 	/**
 	 * 
 	 */
@@ -30,20 +23,13 @@ public class UserAction extends ActionSupport {
 	
 	private User user;
 	private Map<Object,Object> session;
-	private UserService userService;
+	
 	public void setSession(Map<Object,Object> session) {
 		this.session = session;
 	}
 	
-	public UserService getUserService() {
-		return userService;
-	}
-	public void setUserService(UserService userService) {
-		this.userService = userService;
-	}
-=======
+	
 
->>>>>>> 6490904f6fb6f79b5d897561039ec83906ae18b0
 	/**
 	 * 登陆
 	 * @return
