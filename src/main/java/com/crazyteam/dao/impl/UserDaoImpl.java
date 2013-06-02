@@ -5,7 +5,7 @@ import javax.annotation.Resource;
 import org.hibernate.SessionFactory;
 import org.springframework.stereotype.Component;
 
-import com.crazyteam.ado.UserDao;
+import com.crazyteam.dao.UserDao;
 import com.crazyteam.entity.User;
 
 @Component(value = "userDao")

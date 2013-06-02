@@ -5,7 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.crazyteam.ado.UserDao;
+import com.crazyteam.dao.UserDao;
 import com.crazyteam.entity.User;
 import com.crazyteam.service.UserService;
 import com.crazyteam.util.Page;
