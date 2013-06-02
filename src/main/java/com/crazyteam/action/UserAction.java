@@ -16,25 +16,27 @@ public class UserAction extends ActionSupport {
 	/**
 	 * 
 	 */
-	private User user;
+	
 	private static final long serialVersionUID = 7652872498317019704L;
 	
-	/**
-	 * 登陆
-	 * @return
-	 * @throws Exception
-	 */
-	private Map session;
-	public void setSession(Map session) {
+	private User user;
+	private Map<Object,Object> session;
+	private UserService userService;
+	public void setSession(Map<Object,Object> session) {
 		this.session = session;
 	}
-	private UserService userService;
+	
 	public UserService getUserService() {
 		return userService;
 	}
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
+	/**
+	 * 登陆
+	 * @return
+	 * @throws Exception
+	 */
 	public String login() throws Exception
 	{
 
@@ -49,7 +51,7 @@ public class UserAction extends ActionSupport {
 		else
 		{
 			session.put("name", user.getName());
-			return  "qqqq";
+			return  SUCCESS;
 		}
 	}
 	/**
@@ -59,7 +61,7 @@ public class UserAction extends ActionSupport {
 	 */
 	public String logout() throws Exception
 	{
-		session.remove("admin");
+		session.remove("name");
 		return SUCCESS;
 	}
 	/**
@@ -71,6 +73,8 @@ public class UserAction extends ActionSupport {
 	{
 		return null;
 	}
+	
+	
 	public User getUser() {
 		return user;
 	}

@@ -6,13 +6,18 @@
 	<package name="user" extends="struts-default" namespace="/user">
 		<action name="login" class="userAction" method="login">
 			<result name="success" >/main.html</result>
-			<result name="qqqq" >/login.html</result>
-			<
+			<result name="input" >/login.html</result>
+		</action>
+		<action name="logout" class="userAction" method="logout">
+			<result></result>
 		</action>
 	</package>
 	<package name="admin" extends="struts-default"   namespace="/admin">
 		<action name="login" class="adminAction" method="login" >
-			<result name="success" >/test.html</result>
+			<result></result>
+		</action>
+		<action name="logout" class="adminAction" method="logout">
+			<result></result>
 		</action>
 	</package>
 
