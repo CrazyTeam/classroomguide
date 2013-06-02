@@ -51,9 +51,9 @@
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	<bean id="userService" class="com.crazyteam.service.UserServiceImpl"></bean>
+	<bean id="userService" class="com.crazyteam.service.impl.UserServiceImpl"></bean>
 	<bean id="userAction" class="com.crazyteam.action.UserAction" scope="prototype">
-		<property name="userService"></property>
+		<property name="userService" ref="userService"></property>
 	</bean>
 	<bean id="adminAction" class="com.crazyteam.action.AdminAction" scope="prototype"></bean>
 	

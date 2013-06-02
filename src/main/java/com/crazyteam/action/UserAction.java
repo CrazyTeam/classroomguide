@@ -13,7 +13,7 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author jiangsuyong
  *
  */
-@Component(value="userAction")
+
 public class UserAction extends ActionSupport {
 	/**
 	 * 
@@ -41,7 +41,7 @@ public class UserAction extends ActionSupport {
 	public UserService getUserService() {
 		return userService;
 	}
-	@Resource(name="userService")
+	
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
