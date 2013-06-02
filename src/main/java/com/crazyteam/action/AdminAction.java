@@ -8,4 +8,9 @@ public class AdminAction extends ActionSupport {
 	{
 		return SUCCESS;
 	}
+	public String logout() throws Exception
+	{
+		return null;
+	}
+	
 }

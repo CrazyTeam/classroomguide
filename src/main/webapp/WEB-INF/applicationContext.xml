@@ -29,15 +29,6 @@
 		<!-- 是否在自动回收超时连接的时候打印连接的超时错误，将被遗弃的数据库连接的回收记入日志 -->
 		<property name="logAbandoned" value="true" />
 
-
-		<!-- <property name="url" value="jdbc:mysql://localhost:3306/chensong?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true"></property> 
-			<property name="username" value="chensong"></property> <property name="password" 
-			value="child"></property> <property name="maxActive" value="100"></property> 
-			<property name="maxIdle" value="30"></property> <property name="maxWait" 
-			value="500"></property> <property name="defaultAutoCommit" value="true"></property> -->
-
-
-
 	</bean>
 
 	<bean id="sessionFactory"

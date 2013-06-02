@@ -5,13 +5,11 @@
 <!--管理员实体类与数据库的映射-->
 
 <hibernate-mapping>
-  <class name="com.crazyteam.entity.User" table="user"> 
+  <class name="com.crazyteam.entity.Admin" table="admin"> 
      <id name="id" column="id" type="integer"></id>
      <property name="name" column="name" type="string"></property>
      <property name="password" column="password" type="string"></property>
      <property name="email" column="email" type="string"></property>
-     <property name="forbid" column="forbid" type="boolean"></property>
-     <property name="weight" column="weight" type="integer"></property>
     </class>
     
 </hibernate-mapping>
