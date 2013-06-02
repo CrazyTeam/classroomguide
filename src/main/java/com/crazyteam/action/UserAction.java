@@ -1,6 +1,13 @@
 package com.crazyteam.action;
 
+<<<<<<< HEAD
 import java.util.Map;
+=======
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+>>>>>>> 6490904f6fb6f79b5d897561039ec83906ae18b0
 
 import com.crazyteam.entity.User;
 import com.crazyteam.service.UserService;
@@ -11,8 +18,10 @@ import com.opensymphony.xwork2.ActionSupport;
  * @author jiangsuyong
  *
  */
+@Component(value="userAction")
 public class UserAction extends ActionSupport {
 
+<<<<<<< HEAD
 	/**
 	 * 
 	 */
@@ -32,11 +41,24 @@ public class UserAction extends ActionSupport {
 	public void setUserService(UserService userService) {
 		this.userService = userService;
 	}
+=======
+
+>>>>>>> 6490904f6fb6f79b5d897561039ec83906ae18b0
 	/**
 	 * 登陆
 	 * @return
 	 * @throws Exception
 	 */
+	
+	private UserService userService;
+	
+	public UserService getUserService() {
+		return userService;
+	}
+	@Resource(name="userService")
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
 	public String login() throws Exception
 	{
 
@@ -71,7 +93,14 @@ public class UserAction extends ActionSupport {
 	 */
 	public String register() throws Exception
 	{
-		return null;
+		User user = new User();
+		user.setEmail("1013598664@qq.com");
+		user.setForbid(false);
+		user.setName("linving");
+		user.setPassword("a1008611");
+		user.setWeight(1);
+		userService.saveUser(user);
+		return SUCCESS;
 	}
 	
 	
