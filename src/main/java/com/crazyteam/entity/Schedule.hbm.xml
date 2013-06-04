@@ -6,7 +6,9 @@
 
 <hibernate-mapping>
   <class name="com.crazyteam.entity.Schedule" table="schedule"> 
-     <id name="id" column="id" type="integer"></id>
+     <id name="id" column="id" type="integer">
+     	<generator class="increment"></generator>
+     </id>
      <property name="lession" column="lession" type="integer"></property>
      <property name="weekDay" column="weekday" type="integer"></property>
      <many-to-one name="course" class="com.crazyteam.entity.Course" column="courseid"> </many-to-one>

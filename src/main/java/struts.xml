@@ -7,10 +7,14 @@
 	<package name="user" extends="struts-default" namespace="/user">
 		<action name="login" class="userAction" method="login">
 			<result name="success" >/main.html</result>
-			<result name="input" >/login.html</result>
+			<result name="login" >/login.html</result>
 		</action>
 		<action name="logout" class="userAction" method="logout">
-			<result></result>
+			<result>/login.html</result>
+		</action>
+		<action name="register" class="userAction" method="register">
+			<result name="success" type="">/login.html</result>
+			<result name="error">/error.jsp</result>
 		</action>
 	</package>
 	<package name="admin" extends="struts-default"   namespace="/admin">

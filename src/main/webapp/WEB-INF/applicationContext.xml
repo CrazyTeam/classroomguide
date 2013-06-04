@@ -5,8 +5,7 @@
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
-		<property name="url"
-			value="jdbc:mysql://localhost:3306/chensong?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;transformedBitIsBoolean=true"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/guide"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="123456"></property>
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
@@ -36,26 +35,72 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="mappingResources">
 			<list>
-				<value>com/crazyteam/entity/Admin.hbm.xml
-				</value>
+				<value>com/crazyteam/entity/Admin.hbm.xml</value>
+				<value>com/crazyteam/entity/User.hbm.xml</value>
+				<value>com/crazyteam/entity/Classroom.hbm.xml</value>
+				<value>com/crazyteam/entity/ClassroomState.hbm.xml</value>
+				<value>com/crazyteam/entity/ClassroomUseInfo.hbm.xml</value>
+				<value>com/crazyteam/entity/Course.hbm.xml</value>
+				<value>com/crazyteam/entity/Schedule.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
-			<value>
-				org.hibernate.dialect.MySQLDialect
-			</value>
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				
+			</props>
 		</property>
-	</bean>
 
-	<bean id="txManager"
+	</bean>
+	<bean id="transactionManager"
 		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
+
 	</bean>
-	<bean id="userService" class="com.crazyteam.service.impl.UserServiceImpl"></bean>
-	<bean id="userAction" class="com.crazyteam.action.UserAction" scope="prototype">
+	<!-- hibernate4必须配置为开启事务 否则 getCurrentSession()获取不到 -->
+	 <bean id="transactionInterceptor"  
+         class="org.springframework.transaction.interceptor.TransactionInterceptor">  
+         <property name="transactionManager" ref="transactionManager" />  
+         <!-- 配置事务属性 -->  
+         <property name="transactionAttributes">  
+             <props>  
+                 <prop key="*">PROPAGATION_REQUIRED</prop>  
+             </props>  
+         </property>  
+     </bean>
+       
+     <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">  
+         <property name="beanNames">  
+             <list>  
+                 <value>*Dao</value>
+            </list>  
+         </property>  
+         <property name="interceptorNames">  
+             <list>  
+                 <value>transactionInterceptor</value>  
+             </list>  
+         </property>  
+     </bean>  
+	
+
+
+	<bean id="userDao" class="com.crazyteam.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userService" class="com.crazyteam.service.impl.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	<bean id="userAction" class="com.crazyteam.action.UserAction"
+		scope="prototype">
 		<property name="userService" ref="userService"></property>
 	</bean>
-	<bean id="adminAction" class="com.crazyteam.action.AdminAction" scope="prototype"></bean>
-	
-	
+
+
+
+	<bean id="adminAction" class="com.crazyteam.action.AdminAction"
+		scope="prototype">
+
+	</bean>
 </beans>

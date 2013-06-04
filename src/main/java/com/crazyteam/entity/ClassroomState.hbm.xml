@@ -6,7 +6,9 @@
 
 <hibernate-mapping>
   <class name="com.crazyteam.entity.ClassroomState" table="classroomstate"> 
-     <id name="id" column="id" type="integer"></id>
+     <id name="id" column="id" type="integer">
+     	<generator class="increment"></generator>
+     </id>
      <property name="state" column="state" type="integer"></property>
      <property name="time" column="time" type="integer"></property>
      <many-to-one name="classroom" class="com.crazyteam.entity.Classroom" column="classroomid" >

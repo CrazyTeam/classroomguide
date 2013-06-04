@@ -6,7 +6,9 @@
 
 <hibernate-mapping>
   <class name="com.crazyteam.entity.Course" table="course"> 
-     <id name="id" column="id" type="integer"></id>
+     <id name="id" column="id" type="integer">
+     	<generator class="increment"></generator>
+     </id>
     <property name="name" column="name" type="string"></property>
     <property name="teacher"  column="teacher" type="string"></property>
     <property name="startWeek" column="startweek" type="integer"></property>

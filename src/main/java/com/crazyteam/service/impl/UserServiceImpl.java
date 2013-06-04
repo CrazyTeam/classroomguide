@@ -9,8 +9,7 @@ import com.crazyteam.dao.UserDao;
 import com.crazyteam.entity.User;
 import com.crazyteam.service.UserService;
 import com.crazyteam.util.Page;
-@Service(value="userService")
-@Transactional
+
 public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
@@ -18,7 +17,7 @@ public class UserServiceImpl implements UserService {
 		return userDao;
 	}
 
-	@Resource(name = "userDao")
+
 	public void setUserDao(UserDao userDao) {
 		this.userDao = userDao;
 	}

@@ -1,3 +1,4 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="zh_cn">
 <head>
@@ -16,46 +17,22 @@
 	<div data-role="page" id="page1">
 
 		<div data-role="header">
-			<h1>校园助手</h1>
+			<h1>校园助手--注册</h1>
 			<a class="ui-btn-right" href="#page2" data-role="button">
-            找回密码
-        	</a>
-		</div>
-
-		<div data-role="content">
-			<form action="/user/login" method="POST">
-     			<label for="name">账号：</label>
-     			<input name="user.name" id="name" type="text" value="">
-     			 <label for="password">密码：</label>
-     			<input name="user.password" id="password" type="password" value="" autocomplete="off" data-clear-btn="true">
-     			<input type="submit" value="登陆">
-     			<a href="/register.jsp" data-role="button">注册</a>
-			</form>
-		</div>
-
-		<div data-role="footer">
-			<h4>Copyright 2013 CrazyTeam</h4>
-		</div>
-	</div>
-	<div data-role="page" id="page2">
-
-		<div data-role="header">
-			<h1>校园助手</h1>
-			<a class="ui-btn-right" href="#page1" data-role="button" >
             登陆
         	</a>
 		</div>
 
 		<div data-role="content">
-			<form action="./RetakePassword.html" method="POST">
-     			<label for="name">账号：</label>
-     			<input name="name" id="name" type="text" value="">
-     			 <label for="checkcode">手机验证码</label>
-     			<input name="chencoode" id="password" type="text" value="" autocomplete="off" data-clear-btn="true">
-     			<input type="submit" value="下一步">
-     			
+			<form action="/user/register" method="POST">
+     			<label for="name">注册账号：</label>
+     			<input name="user.name" id="name" type="text" value="">
+     			 <label for="password">密码：</label>
+     			<input name="user.password" id="password" type="password" value="" autocomplete="off" data-clear-btn="true">
+     			<label for="password">确认密码：</label>
+     			<input name="passwordcheck" id="passwordcheck" type="password" value="" autocomplete="off" data-clear-btn="true">
+     			<input type="submit" value="注册">
 			</form>
-			
 		</div>
 
 		<div data-role="footer">

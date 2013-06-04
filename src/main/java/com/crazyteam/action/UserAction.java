@@ -47,7 +47,7 @@ public class UserAction extends ActionSupport {
 	}
 	public String login() throws Exception
 	{
-
+		
 		User u=userService.findUserByName(user.getName());
 		if(u==null)
 		{
@@ -79,12 +79,7 @@ public class UserAction extends ActionSupport {
 	 */
 	public String register() throws Exception
 	{
-		User user = new User();
-		user.setEmail("1013598664@qq.com");
-		user.setForbid(false);
-		user.setName("linving");
-		user.setPassword("a1008611");
-		user.setWeight(1);
+		
 		userService.saveUser(user);
 		return SUCCESS;
 	}
