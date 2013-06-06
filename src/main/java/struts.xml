@@ -7,6 +7,14 @@
 		<action name="login" class="userAction" method="login">
 			<result name="success" >/main.html</result>
 			<result name="login" >/login.html</result>
+			<result name="a" >/adminhome.html</result>
+		</action>
+	</package>
+	<package name="Admin" extends="struts-default" namespace="/">
+		<action name="login" class="AdminAction" method="login">
+			<result name="success" >/main.html</result>
+			<result name="login" >/login.html</result>
+			<result name="a" >/adminhome.html</result>
 		</action>
 	</package>
 
