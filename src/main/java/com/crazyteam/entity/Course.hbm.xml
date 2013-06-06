@@ -5,13 +5,14 @@
 <!--管理员实体类与数据库的映射-->
 
 <hibernate-mapping>
-  <class name="com.crazyteam.entity.Admin" table="admin"> 
+  <class name="com.crazyteam.entity.Course" table="course"> 
      <id name="id" column="id" type="integer">
      	<generator class="increment"></generator>
      </id>
-     <property name="name" column="name" type="string"></property>
-     <property name="password" column="password" type="string"></property>
-     <property name="email" column="email" type="string"></property>
+    <property name="name" column="name" type="string"></property>
+    <property name="teacher"  column="teacher" type="string"></property>
+    <property name="startWeek" column="startweek" type="integer"></property>
+    <property name="endWeek" column="endweek" type="integer"></property>
     </class>
     
 </hibernate-mapping>

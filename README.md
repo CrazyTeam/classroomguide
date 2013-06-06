@@ -31,6 +31,10 @@
      git  commit  -m  "your message"  把staging里的代码提交到repo中
      
      git  push  把本地repo 代码push到github上来
+     
+     项目数据库名为：guide，请大家在mysql上建立该数据库
+     数据库的用户名及登陆密码请到web-inf下applicationContext.xml修改。
+     
 
     
     

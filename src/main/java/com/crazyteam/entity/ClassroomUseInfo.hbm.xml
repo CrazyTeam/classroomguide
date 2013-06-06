@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<!--管理员实体类与数据库的映射-->
+
+<hibernate-mapping>
+  <class name="com.crazyteam.entity.ClassroomUseInfo" table="classroomuseinfo"> 
+     <id name="id" column="id" type="integer">
+     	<generator class="increment"></generator>
+     </id>
+     <property name="state" column="state" type="integer"></property>
+     <property name="time" column="time" type="integer"></property>
+     <property name="date" column="date" type="date"></property>
+     <property name="weight" column="weight" type="integer"></property>
+     <property name="weekDay" column="weekday" type="integer"></property>
+     <many-to-one name="user" class="com.crazyteam.entity.User" column="userid"></many-to-one>
+     <many-to-one name="classroom" class="com.crazyteam.entity.Classroom" column="classroomid"></many-to-one>
+    </class>
+    
+</hibernate-mapping>

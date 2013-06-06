@@ -5,4 +5,4 @@
  * @author jiangsuyong
  *
  */
-package com.crazyteam.ado;
+package com.crazyteam.dao;

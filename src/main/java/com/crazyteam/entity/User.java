@@ -1,5 +1,8 @@
 package com.crazyteam.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * 
  * 
@@ -8,7 +11,9 @@ package com.crazyteam.entity;
  * 
  *
  */
+
 public class User {
+
 	private Integer id;
 	private String name;
 	private String password;
